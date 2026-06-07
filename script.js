@@ -2,15 +2,33 @@ const API_KEY = "b36b339a2d3dc68d186ed367e6ece130";
 
 window.onload = loadPopularMovies;
 
-async function loadPopularMovies(){
+// async function loadPopularMovies(){
 
-    const url =
-    `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
+//     const url =
+//     `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`;
 
-    const response = await fetch(url);
-    const data = await response.json();
+//     const response = await fetch(url);
+//     const data = await response.json();
 
-    displayMovies(data.results);
+//     displayMovies(data.results);
+// }
+async function loadPopularMovies() {
+    try {
+        const response = await fetch(
+            `https://api.themoviedb.org/3/movie/popular?api_key=${API_KEY}`
+        );
+
+        console.log("Status:", response.status);
+
+        const data = await response.json();
+
+        console.log(data);
+
+        displayMovies(data.results);
+
+    } catch (error) {
+        console.error(error);
+    }
 }
 
 async function searchMovies(){
