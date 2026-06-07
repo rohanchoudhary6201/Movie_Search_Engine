@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MovieVerse 3D</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg"></div>
+
+<header>
+    <h1>🎬 MovieVerse 3D</h1>
+
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search any movie...">
+        <button onclick="searchMovies()">Search</button>
+    </div>
+</header>
+
+<div id="movies" class="movie-grid"></div>
+
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeTrailer()">✖</span>
+        <iframe id="trailerFrame" allowfullscreen></iframe>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
