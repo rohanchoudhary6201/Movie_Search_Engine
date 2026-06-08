@@ -1,4 +1,4 @@
-const API_KEY = "b36b339a2d3dc68d186ed367e6ece130";
+const API_KEY = "7b031fa5";
 
 window.onload = loadPopularMovies;
 
